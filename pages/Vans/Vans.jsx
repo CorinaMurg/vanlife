@@ -1,16 +1,8 @@
+
 import React from "react"
 import { Link, useSearchParams } from "react-router-dom"
+import { getVans } from "../../api"
 
-/**
- * {
-    * id: "1", 
-    * name: "Modest Explorer", 
-    * price: 60, 
-    * description: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!", 
-    * imageUrl: "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png", 
-    * type: "simple"
- * }
- */
 export default function Vans() {
     const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
@@ -41,17 +33,14 @@ export default function Vans() {
 
     const vanElements = displayedVans.map(van => (
         <div key={van.id} className="van-tile">
-            {/* not needed. we are already in /vans. the id is a string already
-            <Link to={`/vans/${van.id}`}>  */}
-            <Link 
-                to={van.id} 
-                state={{ 
-                    search: `?${searchParams.toString()}`, 
-                    // will use for back to vans
-                    type: typeFilter 
+            <Link
+                to={van.id}
+                state={{
+                    search: `?${searchParams.toString()}`,
+                    type: typeFilter
                 }}
             >
-                <img src={van.imageUrl} />
+                <img src={van.imageUrl} alt=""/>
                 <div className="van-info">
                     <h3>{van.name}</h3>
                     <p>${van.price}<span>/day</span></p>
@@ -110,7 +99,7 @@ export default function Vans() {
                     <button
                         onClick={() => handleFilterChange("type", null)}
                         className="van-type clear-filters"
-                    >Clear filter</button>
+                    >All</button>
                 ) : null}
 
             </div>
@@ -120,5 +109,3 @@ export default function Vans() {
         </div>
     )
 }
-
-
