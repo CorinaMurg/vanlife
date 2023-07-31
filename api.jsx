@@ -65,6 +65,5 @@ export async function loginUser(creds) {
             status: res.status
         }
     }
-
     return data
 }
