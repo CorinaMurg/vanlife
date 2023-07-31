@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
@@ -32,10 +29,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-          <Route
-            path="login"
-            element={<Login />}
-          />
+          <Route path="login" element={<Login />}/>
 
           <Route element={<AuthRequired />}>
             <Route path="host" element={<HostLayout />}>
