@@ -74,6 +74,7 @@ export default function Login() {
                     }
                 </button>
             </form>
+            <p>Shhhhh ... Use b@b.com and ... for your credentials. </p>
         </div>
     )
 

@@ -8,10 +8,8 @@ import {
     getDoc,
     query,
     where,
-    documentId
 } from "firebase/firestore/lite"
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDhbk6hYM399Vj5geqgKT7u5Jjnhv5RHAM",
   authDomain: "vanlife-2e444.firebaseapp.com",
@@ -24,7 +22,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 
-// Refactoring the fetching functions below
 const vansCollectionRef = collection(db, "vans")
 
 export async function getVans() {

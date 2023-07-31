@@ -25,6 +25,8 @@ body {
     scrollbar-width: none;
     width: 50%;
     margin-inline: auto;
+    -webkit-box-shadow: 0px 34px 40px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 34px 40px 12px rgba(0, 0, 0, 0.2);
 }
 
 .site-wrapper {
@@ -79,7 +81,7 @@ main {
 }
 
 footer {
-    background-color: #161616;
+    background-color: #231f20;
     color: #aaaaaa;
     height: 74px;
     display: flex;
