@@ -1,6 +1,5 @@
 
-Van Life
-A React project built as part of Scrimba's Advanced React course.
+Van Life, a React project built as part of Scrimba's Advanced React course.
 
 I was very excited to start this project for two reasons: React Router and Firebase/Firestore.
 I had not used them previously in any other project, and are considered two important tools
@@ -9,6 +8,7 @@ for creating a single-page application with backend features.
 Here is how I used them for this project:
 
 **React Router**
+<br>
 To manage different pages I used the following components:
 
 1. **BrowserRouter** and **Routes** to provide the routing structure for the entire app.
